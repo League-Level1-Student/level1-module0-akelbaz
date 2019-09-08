@@ -1,6 +1,6 @@
 int x = 0 ;
-int speed = 10;
-int speedY = 10;
+float speed = 10;
+float speedY = 10;
 int y = 0;
 boolean run = true;
 float time = 0.00;
@@ -35,6 +35,7 @@ void draw(){
    if(y>=height-check){
      checkBounce();
    }
+ 
    if(gore){
 image(die,0,0);
 run=false;
@@ -95,20 +96,4 @@ speedY=-speedY;
 }else{
 gore=true;
 }
-if(time>15){
-speedY=15;
-speed=15;
-}
-if(time>30){
-
-speed=20;
-speedY = 20;
-}
-if(time>45){
-
-speed=25;
-speedY = 25;
-
-}
-
 }
