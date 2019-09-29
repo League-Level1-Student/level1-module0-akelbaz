@@ -21,10 +21,10 @@ public class BodyPartQuiz {
 	// package,or if you prefer, get celebrity photos from the Internet,
 	// place them in the default package, and change the names below.
 
-	String firstImage = "src/_05_body_part_quiz/endermite.jpeg";
-	String secondImage = "src/_05_body_part_quiz/bee.jpeg";
-	String thirdImage = "src/_05_body_part_quiz/shulker.jpeg";
-	String fourthImage = "src/_05_body_part_quiz/jack.jpeg";
+	String firstImage = "Cow.png";
+	String secondImage = "Drowned.png";
+	String thirdImage = "husk.png";
+	String fourthImage = "Stray.png";
 
 	JFrame window = new JFrame();
 	JPanel panel = new JPanel();
@@ -39,10 +39,9 @@ public class BodyPartQuiz {
 		imageIterator = imageList.iterator();
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		window.add(panel);
-
 		// 3. Change the size of the window so that you can only see part of the
 		// image.
-		window.setSize(500, 500);
+		window.setSize(250, 250);
 
 		showNextImage();
 
@@ -59,11 +58,11 @@ initializeGui();
 
 		// 5. Check their answer. If they guessed correctly:
 		// -- Tell them they are right and increase the score by 1
-if(guess.equalsIgnoreCase("endermite")) {
+if(guess.equalsIgnoreCase("cow")) {
 JOptionPane.showMessageDialog(null, "DING DING");
 score++;
 }else {
-	JOptionPane.showMessageDialog(null, "ERRRRRRRRRR!!! The correct answer is 'endermite'");
+	JOptionPane.showMessageDialog(null, "ERRRRRRRRRR!!! The correct answer is 'cow'");
 
 }
 	// 6. Otherwise:
@@ -73,26 +72,36 @@ score++;
 	
 showNextImage();
 String guess2 = JOptionPane.showInputDialog("who is this?");
-		if(guess2.equalsIgnoreCase("bee")) {
+		if(guess2.equalsIgnoreCase("drowned")) {
 			JOptionPane.showMessageDialog(null, "DING DING");
 			score++;
 			}else {
-				JOptionPane.showMessageDialog(null, "ERRRRRRRRRR!!! The correct answer is 'bee'");
+				JOptionPane.showMessageDialog(null, "ERRRRRRRRRR!!! The correct answer is 'drowned'");
 
 			}
 		showNextImage();
 		String guess3 = JOptionPane.showInputDialog("who is this?");
-				if(guess3.equalsIgnoreCase("shulker")) {
+				if(guess3.equalsIgnoreCase("husk")) {
 					JOptionPane.showMessageDialog(null, "DING DING");
 					score++;
 					}else {
-						JOptionPane.showMessageDialog(null, "ERRRRRRRRRR!!! The correct answer is 'shulker'");
+						JOptionPane.showMessageDialog(null, "ERRRRRRRRRR!!! The correct answer is 'husk'");
+
+					}
+				showNextImage();
+
+				String guess4 = JOptionPane.showInputDialog("who is this?");
+				if(guess4.equalsIgnoreCase("stray")) {
+					JOptionPane.showMessageDialog(null, "DING DING");
+					score++;
+					}else {
+						JOptionPane.showMessageDialog(null, "ERRRRRRRRRR!!! The correct answer is 'stray'");
 
 					}
 		// 8. .... repeat 4-7 for all your images.....
 
 		// 9. Show them their current score
-
+JOptionPane.showMessageDialog(null, score);
 	}
 
 	public void showNextImage() {
